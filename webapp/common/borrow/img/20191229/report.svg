@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>编组备份 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,2 L4.39550781,2 C4.66984217,3.10588608 5.03322515,3.80429102 5.48565674,4.09521484 C6.15682983,4.52679443 6.54019165,4.47387695 8.95770264,4.50033569 C11.3752136,4.52679443 11.982926,4.42041811 12.5549011,4.0463562 C12.9554356,3.78441355 13.299033,3.10229482 13.5856934,2 L14,2 C16.209139,2 18,3.790861 18,6 L18,16 C18,18.209139 16.209139,20 14,20 L4,20 C1.790861,20 2.705415e-16,18.209139 0,16 L0,6 C-2.705415e-16,3.790861 1.790861,2 4,2 Z M7,0 L11,0 C12.1045695,-2.02906125e-16 13,0.8954305 13,2 C13,3.1045695 12.1045695,4 11,4 L7,4 C5.8954305,4 5,3.1045695 5,2 C5,0.8954305 5.8954305,2.02906125e-16 7,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="班级报告-图表" transform="translate(-746.000000, -238.000000)">
+            <g id="编组备份-2" transform="translate(746.000000, 238.000000)">
+                <g id="椭圆形-+-椭圆形备份蒙版">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="蒙版" fill="#8D9DFF" xlink:href="#path-1"></use>
+                    <circle id="椭圆形" fill-opacity="0.26" fill="#FFFFFF" mask="url(#mask-2)" cx="16.5" cy="2.5" r="5.5"></circle>
+                </g>
+                <polyline id="直线-40备份-2" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" points="4 12 7.06779283 9.22886144 11.1420515 12 14 8"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>分组 17</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="教师学生管理" transform="translate(-332.000000, -398.000000)" fill-rule="nonzero">
+            <g id="分组-17-copy" transform="translate(332.000000, 398.000000)">
+                <g id="分组-6">
+                    <path d="M7,14 C3.13400675,14 4.57150657e-16,10.8659932 0,7 C-4.57150657e-16,3.13400675 3.13400675,6.85725986e-16 7,0 C10.8659932,-6.85725986e-16 14,3.13400675 14,7 C14,8.85651543 13.2625021,10.6369928 11.9497475,11.9497475 C10.6369928,13.2625021 8.85651543,14 7,14 Z M7,12.9705882 C10.2974648,12.9705882 12.9705882,10.2974648 12.9705882,7 C12.9705882,3.70253517 10.2974648,1.02941176 7,1.02941176 C3.70253517,1.02941176 1.02941176,3.70253517 1.02941176,7 C1.02941176,10.2974648 3.70253517,12.9705882 7,12.9705882 Z" id="合并形状-copy" fill="#26C486" transform="translate(7.000000, 7.000000) rotate(-180.000000) translate(-7.000000, -7.000000) "></path>
+                    <g id="分组-4-copy" transform="translate(7.000000, 7.500000) rotate(-180.000000) translate(-7.000000, -7.500000) translate(5.000000, 4.000000)">
+                        <path d="M2,2 L2,7" id="直线-27" stroke="#26C486" stroke-linecap="square"></path>
+                        <polygon id="三角形" fill="#26C486" points="2 0 4 3 0 3"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

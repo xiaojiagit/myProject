@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="36px" viewBox="0 0 80 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>编组</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="测试" transform="translate(-114.000000, -161.000000)">
+            <g id="编组" transform="translate(114.000000, 161.000000)">
+                <polygon id="矩形" fill="#0DA67D" points="0 3 6 0 6 36 0 33"></polygon>
+                <polygon id="矩形" fill="#26C486" points="0 3 64 3 80 17.1666667 64 33 0 33"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
