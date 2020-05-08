@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="activeDatabaseInfo">
+      <NewDatabaseInfo>
+        <option name="database" value="dy_copy_bak" />
+        <option name="databaseType" value="MySql" />
+        <option name="password" value="love431" />
+        <option name="url" value="192.168.3.55:3306" />
+        <option name="userName" value="root" />
+      </NewDatabaseInfo>
+    </option>
+    <option name="databaseInfos">
+      <list>
+        <NewDatabaseInfo>
+          <option name="database" value="dy_copy_bak" />
+          <option name="databaseType" value="MySql" />
+          <option name="password" value="love431" />
+          <option name="url" value="192.168.3.55:3306" />
+          <option name="userName" value="root" />
+        </NewDatabaseInfo>
+      </list>
+    </option>
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="addSerializeUid" value="true" />
+        <option name="javaMapperPackage" value="org.mySelfBank.dao" />
+        <option name="javaMapperPath" value="D:\myProject\src\myself\java" />
+        <option name="javaModelPackage" value="org.mySelfBank.entity" />
+        <option name="javaModelPath" value="D:\myProject\src\myself\java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="mySelfBank" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="mySelfBank">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="org.mySelfBank.dao" />
+                  <option name="javaMapperPath" value="D:\myProject\src\myself\java" />
+                  <option name="javaModelPacakge" value="org.mySelfBank.entity" />
+                  <option name="javaModelPath" value="D:\myProject\src\myself\java" />
+                  <option name="xmlPackage" value="org.mySelfBank.dao.mapper" />
+                  <option name="xmlPath" value="D:\myProject\src\myself\java" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="dy_copy_bak:bank_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="BankUser" />
+                  <option name="moduleName" value="mySelfBank" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="useExample" value="true" />
+        <option name="xmlMapperPackage" value="org.mySelfBank.dao.mapper" />
+        <option name="xmlMapperPath" value="D:\myProject\src\myself\java" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

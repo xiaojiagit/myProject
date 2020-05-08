@@ -1,68 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/common/css/layui.css">
-    <script type="text/javascript" src="/common/js/layui.js"></script>
+    <title id="title">AI学习-让学习更有效</title>
+    <link rel="icon" type="image/x-icon" href="common/frontEndStyle/img/logo.png"/>
+
+
+    <meta charset="UTF-8">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <script type="text/javascript" src="common/js/vue/vue.min.js"></script>
+    <script type="text/javascript" src="common/new/js/bank.js"></script>
+    <script src="common/new/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="common/js/layer.js"></script>
+
+    <link href="common/new/css/all.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="common/new/js/lhgdialog.min.js"></script>
+
+    <style type="text/css">
+        .c1 {
+            margin-left: 20%;
+            position: absolute;
+            margin-top: 10%;
+            background: #ffffff;
+            border-radius: 5px;
+            width: 800px;
+            height: 420px;
+            box-shadow: rgba(211, 211, 211, 0) 1px 2px 14px 6px, rgba(211, 211, 211, 0) 1px -2px 12px 6px, rgba(211, 211, 211, 0.8) -1px 2px 14px 6px, rgba(211, 211, 211, 0) -1px -2px 14px 6px;
+            display: flex;
+        }
+    </style>
 </head>
+
 <body>
-<form class="layui-form" action="" method="post">
-    <div class="container">
-        <button class="close" title="关闭">X</button>
-        <div class="layui-form-mid layui-word-aux">
-            <img id="logoid" src="06.png" height="35">
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">用户名</label>
-            <div class="layui-input-block">
-                <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">密 &nbsp;&nbsp;码</label>
-            <div class="layui-input-inline">
-                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
-            </div>
-            <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">验证码</label>
-            <div class="layui-input-inline">
-                <input type="text" name="title" required  lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input verity">
-            </div>
-            <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
-
-        </div>
-        <!-- 			  <div class="layui-form-item">
-                            <label class="layui-form-label">记住密码</label>
-                            <div class="layui-input-block">
-                              <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+<div class="loginPage" id="loginDiv" style="" v-on:keyup.enter="doLogin()">
+    <div class="top"><p><a href="#"><img src="common/frontEndStyle/img/logo.png"/> AI自适应辅助学习系统</a></p></div>
+    <div class="box">
+        <div class="inner">
+            <form>
+                <div class="form">
+                    <h3>登录</h3>
+                    <ul>
+                        <li><input autocomplete="off" type="text" id="loginName" name="" v-model="user.loginName" placeholder="请输入账号/手机号">
+                        </li>
+                        <li><input autocomplete="off" type="password" name="" id="passWord" v-model="user.passWord" placeholder="请输入密码">
+                        </li>
+                        <!--<li >
+                            <input style="width:250px" v-model="user.rand" placeholder="请输入验证码" maxlength="4" />
+                            <div style="width:100px;float: right;margin-top:5px;height:30px;cursor:pointer">
+                                <img id="authimage" v-bind:src="checkSrc" v-on:click="change_authimage()" style="width:80px;" title="点击刷新"/>
                             </div>
-                      </div> -->
-
-        <div class="layui-form-item">
-            <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="formDemo">登陆</button>
-            </div>
+                        </li>-->
+                        <!-- <li style="margin-bottom: 0px">
+                             <div id="drag"></div>
+                         </li>-->
+                    </ul>
+                    <div class="errorTip" style="height: 25px;line-height: 25px;text-align: left" id="msg"></div>
+                    <a href="javascript:void(0)" style="margin-top: 0px" class="loginbtn" v-on:click="doLogin()">确定</a>
+                    <div style="margin-top: 8px">
+                    <!--<span :class="['checkboxModel',{'active':checked}]">
+                        <input style="width: auto;" type="checkbox" v-model="checked"/>
+                    </span>-->
+                        <!--<a href="javascript:void(0)" v-model="checked" v-on:click="check">记住我</a>
+                        <a href="javascript:void(0)" style="float: right" v-on:click="retrievePwd">忘记密码?</a>-->
+                    </div>
+                    <div style="margin: 10px 0px 0px 130px;">
+                        <a href="###" v-on:click="uploadApp()">手机移动端下载安装</a>
+                    </div>
+                </div>
+            </form>
         </div>
-        <a href="" class="font-set">忘记密码?</a>  <a href="" class="font-set">立即注册</a>
     </div>
-</form>
+    <div class="footer" style="border-color: #f8f8f8;">
+        <p>@CopyRight 2018-2020 <a href="http://www.beian.miit.gov.cn" target="_blank" style="color: #666;">京ICP备19039535号-2</a> <a style="color: #666;" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802031548" ><img src="common/frontEndStyle/img/beian.png" style="width: 16px;height: 16px;" />京公网安备 11010802031548号</a> 北京中育亿达科技有限公司</p>
+    </div>
+    <!-- cznn统计代码，隐藏的，必须放在页面最后  开始 -->
+    <div style="display: none;">
+        <script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1277991064&web_id=1277991064"></script>
+    </div>
+    <!-- cznn统计代码，隐藏的，必须放在页面最后  结束 -->
+</div>
+<!--登陆验证-->
 
-<script>
-    layui.use(['form', 'layedit', 'laydate'], function(){
-        var form = layui.form
-            ,layer = layui.layer
-            ,layedit = layui.layedit
-            ,laydate = layui.laydate;
-        //监听提交
-        form.on('submit(demo1)', function(data){
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
-            return false;
-        });
+</body>
+<script type="text/javascript">
+    var loginVm=new Vue({
+        el: "#loginDiv",
+        data: {
+            user: {
+                loginName: '',
+                passWord: '',
+            },
+            checked:'',
+        },
+        methods: {
+            doLogin: function () {
+                $("#msg").text("")
+                if (loginVm.user.loginName == '') {
+                    $("#msg").text("请输入用户名")
+                    $("#loginName").focus();
+                    return;
+                }
+                if (loginVm.user.passWord == '') {
+                    $("#msg").text("请输入密码")
+                    $("#passWord").focus();
+                    return;
+                }
+              /*  if (vm.user.randInput == '') {
+                    $("#msg").text("请完成验证")
+                    return;
+                }*/
+                $.ajax({
+                    type: "post",
+                    url: projectName+"/loginC/Login",
+                    data: JSON.stringify(loginVm.user),
+                    dataType: 'json',
+                    async: false,
+                    contentType: "application/json",
+                    success: function (data) {
+                        if (data.success == true) {
+                            alert("成功");
+                        } else {
+                            $("#msg").text(data.message);
+                        }
+                    },
+                    error: function () {
+                        layer.alert("请求失败");
+                    }
+                });
+            },
+            //扫码下载
+            uploadApp:function(){
+                window.open(projectName + '/show_app.html');
+            },
+            change_authimage:function(){
+                this.checkSrc = projectName + "/authimage.gif?r="+Math.random();
+            }
+
+        }
     });
 </script>
-</body>
 </html>

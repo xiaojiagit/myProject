@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--配置数据库-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${jdbc.driver}" />  <!--数据库连接驱动-->
+        <property name="jdbcUrl" value="${jdbc.url}" />     <!--数据库地址-->
+        <property name="user" value="${jdbc.username}" />   <!--用户名-->
+        <property name="password" value="${jdbc.password}" />   <!--密码-->
+        <property name="maxPoolSize" value="${c3p0.maxPoolSize}" />      <!--最大连接数-->
+        <property name="minPoolSize" value="${c3p0.minPoolSize}" />       <!--最小连接数-->
+        <property name="initialPoolSize" value="${c3p0.initialPoolSize}" />      <!--初始化连接池内的数据库连接-->
+        <property name="maxIdleTime" value="${c3p0.maxIdleTime}" />  <!--最大空闲时间-->
+        <property name="autoCommitOnClose" value="true"/>
+        <property name="checkoutTimeout" value="${c3p0.checkoutTimeout}"/>
+        <property name="acquireIncrement" value="${c3p0.acquireIncrement}"/>
+        <property name="maxIdleTimeExcessConnections" value="${c3p0.maxIdleTimeExcessConnections}" />
+    </bean>
+
+    <!-- sessionFactory 将spring和mybatis整合 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <!-- <property name="configLocation" value="classpath:sqlMapConfig.xml" /> -->
+        <!--<property name="mapperLocations" value="classpath:org/zyyd/base/dao/mapper/*.xml" /> -->   <!-- 加载mapper文件 如果如接口在同一路径下可不写 -->
+        <property name="mapperLocations" >
+            <array>
+                <value>classpath:org/mySelfBank/dao/mapper/*.xml</value>
+                <!--<value>classpath:org/mySelfBank/dao/mapper/vo/*.xml</value>-->
+            </array>
+        </property>
+    </bean>
+
+    <!-- 事务 -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--控制住数据源  -->
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!-- 启用对事务注解的支持 -->
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+    <!--配置事务增强，事务如何切入  -->
+    <!--配置文件形式事物配置，两种方式的事物配置，不需同时配置 -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <!-- 所有方法都是事务方法 -->
+            <tx:method name="insert*" propagation="REQUIRED" rollback-for="Exception"/>
+            <tx:method name="save*" propagation="REQUIRED" rollback-for="Exception"/>
+            <tx:method name="update*" propagation="REQUIRED" rollback-for="Exception"/>
+            <tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception"/>
+            <tx:method name="find" read-only="true" rollback-for="Exception"/>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="get" read-only="true" rollback-for="Exception"/>
+            <tx:method name="*" propagation="REQUIRED" />
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <!-- 切入点表达式 -->
+        <aop:pointcut expression="execution(* org.mySelfBank.*.service..*(..))"
+                      id="pointCut" />
+        <!-- 配置事务增强 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointCut" />
+    </aop:config>
+
+</beans>
