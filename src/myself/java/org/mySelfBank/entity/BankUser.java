@@ -1,7 +1,10 @@
 package org.mySelfBank.entity;
 
+import org.springframework.stereotype.Repository;
+
 import java.io.Serializable;
 import java.util.Date;
+
 
 public class BankUser implements Serializable {
     /**

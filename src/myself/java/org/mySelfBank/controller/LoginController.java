@@ -15,8 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("/loginC")
 public class LoginController {
-    @Autowired
-    private BankUser bankUser;
 
     /**
     * @Title 登录接口
@@ -31,6 +29,7 @@ public class LoginController {
     public Message Login(@RequestBody JSONObject json, HttpServletRequest request){
         Message message=new Message();
         System.out.println("进入到后台了");
+        BankUser bankUser=new BankUser();
 
 
         return message;

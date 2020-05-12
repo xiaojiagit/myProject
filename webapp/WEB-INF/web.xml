@@ -27,6 +27,16 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
+  <!--这个的作用是访问的资源，默认交给静态资源去处理-->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
