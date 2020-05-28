@@ -6,15 +6,26 @@
          id="WebApp_ID" version="2.5">
 <display-name>Archetype Created Web Application</display-name>
 
+  <!--spring监听-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
 
+  <!--spring防止内存溢出监听-->
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+
   <!-- 配置DispatherServlet 处理前端所有请求 -->
   <!--想要controller的注解生效，必须有这个-->
   <servlet>
-    <servlet-name>spring</servlet-name>
+    <servlet-name>springBank</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
@@ -23,7 +34,7 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>spring</servlet-name>
+    <servlet-name>springBank</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 

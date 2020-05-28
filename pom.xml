@@ -28,59 +28,78 @@
     </dependency>
 
     <!--spring配置-->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>5.2.0.RELEASE</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>5.2.0.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-beans</artifactId>
-      <version>5.2.0.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-web</artifactId>
-      <version>5.2.0.RELEASE</version>
-    </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>5.2.0.RELEASE</version>
+      <version>5.1.3.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>5.2.0.RELEASE</version>
-      <scope>test</scope>
+      <artifactId>spring-core</artifactId>
+      <version>5.1.3.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-orm</artifactId>
-      <version>5.2.0.RELEASE</version>
+      <artifactId>spring-context</artifactId>
+      <version>5.1.3.RELEASE</version>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
-      <version>5.2.0.RELEASE</version>
+      <version>5.1.3.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>5.1.3.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.1.3.RELEASE</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-expression</artifactId>
-      <version>5.2.0.RELEASE</version>
+      <version>5.1.3.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>5.1.3.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.1.3.RELEASE</version>
+      <scope>test</scope>
+    </dependency>
+    <!--spring配置疏解-->
+
+    <!--配合spring-beans使用  暂时不知道是什么用途-->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.11</version>
     </dependency>
 
+
+
+
+
+     <!--数据库配置-->
     <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
     <dependency>
       <groupId>org.mybatis</groupId>
@@ -94,12 +113,22 @@
       <version>2.0.0</version>
     </dependency>
 
+      <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>8.0.11</version>
+          <!--<scope>runtime</scope>-->
+      </dependency>
+
     <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
     <dependency>
       <groupId>com.mchange</groupId>
       <artifactId>c3p0</artifactId>
       <version>0.9.5.3</version>
     </dependency>
+
+    <!--数据库配置结束-->
 
       <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
       <dependency>
@@ -115,6 +144,18 @@
       <version>4.0.1</version>
       <scope>provided</scope>
     </dependency>
+
+    <!--ajax参数绑定开始-->
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.10.2</version>
+    </dependency>
+
+
+
+
 
 
 

@@ -1,8 +1,12 @@
 package org.mySelfBank.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import org.mySelfBank.dao.BankUserMapper;
 import org.mySelfBank.entity.BankUser;
+import org.mySelfBank.entity.BankUserExample;
 import org.mySelfBank.entity.vo.Message;
+import org.mySelfBank.service.LoginService;
+import org.mySelfBank.util.MD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,10 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 @RequestMapping("/loginC")
 public class LoginController {
+
+    @Autowired
+    private LoginService loginService;
 
     /**
     * @Title 登录接口
@@ -29,8 +37,7 @@ public class LoginController {
     public Message Login(@RequestBody JSONObject json, HttpServletRequest request){
         Message message=new Message();
         System.out.println("进入到后台了");
-        BankUser bankUser=new BankUser();
-
+        message=loginService.Login(json);
 
         return message;
     }
